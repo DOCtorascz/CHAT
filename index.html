@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <dialog id="autoriz">
+    <div class="dialog__style">
+      <div class="popup__inner">
+        <div class="popup-control">
+          <p class="popup-control__name">Авторизация</p>
+          <a class="popup-control__close" href="#">x</a>
+        </div>
+        <form>
+          <input class="popup__content" type="text" placeholder="Почта:">
+          <button class="popup__open-code stl">Получить код</button>
+          <button class="popup__add-code stl">Ввести код</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="confirmation">
+    <div class="dialog__style">
+      <div class="popup__inner">
+        <div class="popup-control">
+          <p class="popup-control__name">Подтверждение</p>
+          <a class="popup-control__close" href="#">x</a>
+        </div>
+        <form>
+          <input class="popup__content" type="text" placeholder="Код:">
+          <button class="popup__open-code stl">Войти</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="options">
+    <div class="dialog__style">
+      <div class="popup__inner">
+        <div class="popup-control">
+          <p class="popup-control__name">Настройки</p>
+          <a class="popup-control__close" href="#">x</a>
+        </div>
+        <form>
+          <input class="popup__content" type="text" placeholder="Имя в чате:">
+          <button class="popup__open-code stl">-></button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <template id="tmpl">
+    <div class="header__chat-message">
+      <p class="header__chat-message-name">
+        Я: <span class="header__chat-message-content"></span>
+      </p>
+      <p class="header__chat-message-time">
+        18:45
+      </p>
+    </div>
+  </template>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__options">
+          <button class="header__options-add stl">настройки</button>
+          <button class="header__options-exit stl">выйти</button>
+        </div>
+        <div class="header__chat">
+          <div class="tpml__inner">
+
+          </div>
+        </div>
+        <div class="header__add-message">
+          <form action="#">
+            <input class="header__add-message-text" type="text" placeholder="сообщение..">
+            <button class="header__add-message-add">-></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="js/index.js" type="module"></script>
+</body>
+
+</html>

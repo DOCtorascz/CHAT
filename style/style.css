@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+dialog {
+  width: 100%;
+  height: 100%;
+}
+
+.dialog__style {
+  width: 100%;
+  height: 100%;
+  background: #535353;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__inner {
+  max-width: 273px;
+  min-height: 319px;
+  background: white;
+  padding: 21px 14px;
+}
+
+.popup-control {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.popup__content{
+  width: 100%;
+  margin-bottom: 7px;
+  border: 1px solid black;
+  padding: 6px 7px;
+}
+
+.popup__add-code{
+  margin-left: 23px;
+}
+
+#options form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#options form input{
+  width: 80%;
+}
+
+#options form button{
+  align-self: baseline;
+  padding: 4px 8px;
+}
+
+.header__inner {
+  max-width: 304px;
+  margin: 0 auto;
+}
+
+.header__options {
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stl {
+  padding: 6px 8px;
+  background: transparent;
+  border: 1px solid black;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.header__chat {
+  padding: 8px;
+  border: 1px solid black;
+  min-height: 437px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+.header__chat-message {
+  padding: 8px;
+  font-size: 16px;
+  line-height: 19px;
+  background: #E5E5E5;
+  max-width: 150px;
+  margin-bottom: 8px;
+}
+
+.header__chat-message-name {
+  margin-bottom: 4px;
+}
+
+.header__chat-message-time {
+  text-align: end;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header__add-message form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__add-message-text {
+  border: 1px solid black;
+  padding: 6px 7px;
+  font-size: 16px;
+  line-height: 19px;
+  flex-basis: 85%;
+}
+
+.header__add-message-add {
+  border: 1px solid black;
+  background: transparent;
+  padding: 6px 8px;
+}
