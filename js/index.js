@@ -1,3 +1,5 @@
+import { autorizRequest, autorizContent } from "./popupAutoriz.js";
+
 const headerChat = document.querySelector('.header__chat');
 const TmplheaderChat = document.querySelector('#tmpl');
 const TmplheaderChatInner = document.querySelector('.tpml__inner');
@@ -17,8 +19,12 @@ function addMessage() {
   headerChat.append(TmplheaderChatInner)
 }
 
-form.form.addEventListener('click', (event) => {
-  event.preventDefault()
-})
+// form.form.addEventListener('click', (event) => {
+//   event.preventDefault()
+// })
 
 form.headerAddMessageAdd.addEventListener('click', addMessage)
+autorizContent.popupOpenCode.addEventListener('click', (e) => {
+  e.preventDefault()
+  autorizRequest()
+})
