@@ -17,8 +17,11 @@
           <p class="popup-control__name">Авторизация</p>
           <a class="popup-control__close" href="#">x</a>
         </div>
-        <form>
-          <input class="popup__content" type="email" placeholder="Почта:">
+        <form class="form-popup">
+          <input class="popup__content authoriz" type="email" placeholder="Почта:">
+          <div class="error-message">
+            <p class="error-message">Ошибка</p>
+          </div>
           <button class="popup__open-code stl">Получить код</button>
           <button class="popup__add-code stl">Ввести код</button>
         </form>
@@ -26,7 +29,7 @@
     </div>
   </dialog>
 
-  <dialog id="confirmation">
+  <!-- <dialog id="confirmation">
     <div class="dialog__style">
       <div class="popup__inner">
         <div class="popup-control">
@@ -34,14 +37,14 @@
           <a class="popup-control__close" href="#">x</a>
         </div>
         <form>
-          <input class="popup__content" type="text" placeholder="Код:">
-          <button class="popup__open-code stl">Войти</button>
+          <input class="popup__content confirmation" type="text" placeholder="Код:">
+          <button class="popup__open-code stl confirmationBt">Войти</button>
         </form>
       </div>
     </div>
-  </dialog>
+  </dialog> -->
 
-  <dialog id="options">
+  <!-- <dialog id="options">
     <div class="dialog__style">
       <div class="popup__inner">
         <div class="popup-control">
@@ -49,22 +52,19 @@
           <a class="popup-control__close" href="#">x</a>
         </div>
         <form>
-          <input class="popup__content" type="text" placeholder="Имя в чате:">
+          <input class="popup__content options" type="text" placeholder="Имя в чате:">
           <button class="popup__open-code stl">-></button>
         </form>
       </div>
     </div>
-  </dialog>
+  </dialog> -->
 
   <template id="tmpl">
     <div class="header__chat-message">
       <p class="header__chat-message-name">
-        Я: <span class="header__chat-message-content"></span>
+        Я: <span class="header__chat-message-content">ff</span>
       </p>
       <p class="header__chat-message-time">
-        18:45
-      </p>
-    </div>
   </template>
 
   <header class="header">
@@ -89,6 +89,8 @@
     </div>
   </header>
 
+  <script src="js/errsors.js" type="module"></script>
+  <script src="js/validEmail.js" type="module"></script>
   <script src="js/index.js" type="module"></script>
 </body>
 

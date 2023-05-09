@@ -32,7 +32,7 @@ dialog {
 }
 
 .popup__inner {
-  max-width: 273px;
+  max-width: 100%;
   min-height: 319px;
   background: white;
   padding: 21px 14px;
@@ -52,6 +52,13 @@ dialog {
   margin-bottom: 7px;
   border: 1px solid black;
   padding: 6px 7px;
+}
+
+.error-message{
+  margin-bottom: 5px;
+  color: red;
+  font-weight: 900;
+  opacity: 0;
 }
 
 .popup__add-code{
@@ -93,14 +100,13 @@ dialog {
 }
 
 .header__chat {
+  height: 437px;
   padding: 8px;
   border: 1px solid black;
-  min-height: 437px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
   margin-bottom: 8px;
+  height: 437px;
+  overflow: auto;
 }
 
 .header__chat-message {
@@ -114,6 +120,10 @@ dialog {
 
 .header__chat-message-name {
   margin-bottom: 4px;
+}
+
+.header__chat-message-content {
+  word-break: break-all;
 }
 
 .header__chat-message-time {
