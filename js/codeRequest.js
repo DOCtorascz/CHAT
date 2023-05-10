@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 
 function confirmationAddCode() {
   Cookies.set('code', `${authorizContent.textInput.value}`);
-  const contentCodeResponse = { name: `ItsI` };
+  const contentCodeResponse = { name: `Kakashi` };
 
   try {
     fetch(authorizContent.url, {

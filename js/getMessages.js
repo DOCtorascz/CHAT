@@ -17,6 +17,7 @@ function getMessage() {
     .then(response => response.json())
     .then(res => {
       let str = ''
+      res.messages.reverse()
       res.messages.forEach(element => {
         console.log(element)
         str += `<div class="header__chat-message">
