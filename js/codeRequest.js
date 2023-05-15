@@ -1,6 +1,5 @@
 export { confirmationAddCode }
 import { authorizContent } from "./authorizRequest.js";
-import { getMessage } from "./getMessages.js";
 import Cookies from "js-cookie";
 
 function confirmationAddCode() {
@@ -19,7 +18,8 @@ function confirmationAddCode() {
       body: JSON.stringify(contentCodeResponse),
     })
       .then(response => response.json())
-    getMessage()
+
+    authorizContent.textInput.value = ''
     authorizContent.dialog.close()
   } catch (err) {
     alert(err)

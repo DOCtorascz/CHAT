@@ -1,6 +1,9 @@
 import { authorizRequest, authorizContent} from "./authorizRequest.js";
+import { getMessage } from "./getMessages.js";
 import { addCodeAuthoriz, createBtCode } from "./popup.js";
 import { confirmationAddCode } from "./codeRequest.js";
+// import { socet, socket } from "./renderMessage.js";
+import { socet } from "./socetsRequest.js";
 import Cookies from "js-cookie";
 
 authorizContent.getCode.addEventListener('click', (e) => {
@@ -16,6 +19,7 @@ authorizContent.addCode.addEventListener('click', (e) => {
 createBtCode.addEventListener('click', (e) => {
   e.preventDefault()
   confirmationAddCode()
+  getMessage()
 })
 
 const form = {
@@ -25,8 +29,6 @@ const form = {
 }
 
 function addMessage() {
-  const socket = new WebSocket(`wss://edu.strada.one/websockets?${Cookies.get('code')}`);
-
   const headerChat = document.querySelector('.header__chat');
   const TmplheaderChat = document.querySelector('#tmpl');
   const TmplheaderChatInner = document.querySelector('.tpml__inner');
@@ -34,13 +36,12 @@ function addMessage() {
   const messageValue = form.headerAddMessageText.value
   const spanContentText = TmplheaderChat.content.querySelector('.header__chat-message-content');
 
-  socket.onopen = function(e) {
-    socket.send(JSON.stringify({ text: `${messageValue}` }));
-  };
+  const socetMessage = socet()
 
-  socket.onmessage = function(e) {
-    alert(e.data);
-  };
+  socetMessage.onopen = function(e){
+    console.log("[open] Соединение установлено повторно");
+    socetMessage.send(JSON.stringify({ text: messageValue }));
+  }
 
   spanContentText.textContent = messageValue;
   TmplheaderChatInner.append(TmplheaderChat.content.cloneNode(true))
